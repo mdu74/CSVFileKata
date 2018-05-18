@@ -1,6 +1,6 @@
 # CSV File Kata
 
-- Using SOLID principles
+- Use SOLID principles
 
 ## Requirments
 

@@ -22,7 +22,7 @@ namespace CSVFileKata
             
             var cleanCustomersList = _dublicates.RemoveDuplicates(customers);
 
-            var finalList = GetGroupOf(cleanCustomersList, maximumLineLimit);
+            var finalList = GetListOfCustomersFrom(cleanCustomersList, maximumLineLimit);
 
             while (numberOfFiles <= finalList.Count)
             {
@@ -35,7 +35,7 @@ namespace CSVFileKata
             }
         }        
 
-        private static List<IEnumerable<Customer>> GetGroupOf(List<Customer> customers, int maximumLineLimit)
+        private static List<IEnumerable<Customer>> GetListOfCustomersFrom(List<Customer> customers, int maximumLineLimit)
         {
             var groupOfCustomers = customers.Select((customer, myIndexer) => new { Index = myIndexer, Value = customer })
                                             .GroupBy(shorterList => shorterList.Index / maximumLineLimit)

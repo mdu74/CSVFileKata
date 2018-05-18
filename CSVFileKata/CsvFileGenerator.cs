@@ -21,8 +21,6 @@ namespace CSVFileKata
             var newListIndex = 0;
             
             var cleanCustomersList = _dublicates.RemoveDuplicates(customers);
-            var debugDataList = GetGroupOf(customers, maximumLineLimit);
-
 
             var finalList = GetGroupOf(cleanCustomersList, maximumLineLimit);
 
